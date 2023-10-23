@@ -19,7 +19,7 @@
 | 5. (10/27/23) Object Relationships     | [Notes](#) | [Video](#) | [Starter](#) | [Solution](#) |
 | 6. (10/30/23) SQL Fundamentals & Table Relations                            | [Notes](#) | [Video](#) | [Starter](#) | [Solution](#) |
 | 7. (11/1/23) Object-Relational Mapping                                     | [Notes](#) | [Video](#) | [Starter](#) | [Solution](#) |
-| 7. (11/03/23) Your First CLI                                          | [Notes](#) | [Video](#) | [Starter](#) | [Solution](#) |
+| 8. (11/03/23) Your First CLI                                          | [Notes](#) | [Video](#) | [Starter](#) | [Solution](#) |
 
 
 ## 1: Python Fundamentals

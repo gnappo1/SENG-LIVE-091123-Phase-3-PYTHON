@@ -12,7 +12,7 @@
 
 | Lecture                                                                     |   Notes    | Videos     | Starter      | Solution      |
 | --------------------------------------------------------------------------- | :--------: | ---------- | ------------ | ------------- |
-| 1. (07/24/23) Python Fundamentals                                           | [Notes](#) | [Video](#) | [Starter](#) | [Solution](#) |
+| 1. (07/24/23) Python Fundamentals                                           | [Notes](#) | [Video](https://youtu.be/qBDAzHzlFFk) | [Starter](https://github.com/gnappo1/SENG-LIVE-091123-Phase-3-PYTHON/tree/01_matteo_example_starter_python_fundamentals/01_python_fundamentals) | [Solution](https://github.com/gnappo1/SENG-LIVE-091123-Phase-3-PYTHON/tree/01_matteo_example_solution_python_fundamentals/01_python_fundamentals) |
 | 2. (07/25/23) Python Data Structures                                        | [Notes](#) | [Video](#) | [Starter](#) | [Solution](#) |
 | 3. (07/26/23) Object Oriented Programming in Python                         | [Notes](#) | [Video](#) | [Starter](#) | [Solution](#) |
 | 4. (07/27/23) OOP 2: Class Methods, Class Variables, & Object Relationships | [Notes](#) | [Video](#) | [Starter](#) | [Solution](#) |

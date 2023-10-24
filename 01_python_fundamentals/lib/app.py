@@ -82,6 +82,18 @@ def say_hello():
     return "Hello, world!"
 # print(say_hello(), end="\n")
 
+def the_global_keyword():
+    # In Python, if you assign a value to a variable inside a function 
+    # without using the global keyword, Python assumes that you're creating a 
+    # local variable within that function's scope. 
+    # If a variable with the same name exists in the global scope, it won't be modified. 
+    # So, you would use the global keyword when you want to modify a global variable 
+    # from within a function. 
+    global pet_name
+    pet_name = "matteo" #* without the global keyword it would create a local variable
+    #! I just modified the global variable with the line above
+    return pet_name
+
 # TODO 4. ✅ Create a function (pet_greeting) that will return a string with interpolated pet's name
 # Test invocation of "pet_greeting" in ipdb using "pet_greeting()"
 # pet_greeting("Rose") => "Rose says hello!"

@@ -10,22 +10,22 @@ pet_names = ['Rose', 'Meow Meow Beans', 'Mr.Legumes', 'Luke', 'Lea', 'Princess G
 
 #TODO Reading Information From Lists
 #2. ✅ Return the first pet name
-#3. ✅ Return all pet names beginning from the 3rd index [3:]
-#4. ✅ Return all pet names before the 3rd index [:3]
-#5. ✅ Return all pet names beginning from the 3rd index and up to / including the 7th index [3:7]
-#6. ✅ Find the index of a given element => .index() or .find()
-#7. ✅ Read the original list in reverse order => [::-1] or destructively .reverse()
-#8. ✅ Return the frequency of a given element => .count()
+#3. ✅ Return all pet names beginning from the 3rd index (included)
+#4. ✅ Return all pet names before the 3rd index (not included)
+#5. ✅ Return all pet names beginning from the 3rd index and up to / including the 7th index
+#6. ✅ Find the index of a given element
+#7. ✅ Read the original list in reverse order
+#8. ✅ Return the frequency of a given element
 
 #TODO Updating Lists
-#9. ✅ Change the first pet_name to all uppercase letters => .upper()
-#10. ✅ Append a new name to the list => .append()
-#11. ✅ Add a new name at a specific index => .insert()
-#12. ✅ Add two lists together => +
-#13. ✅ Remove the final element from the list => .pop()
-#14. ✅ Remove element by specific index => .pop()
-#15. ✅ Remove a specific element => .remove()
-#16. ✅ Remove all pet names from the list => .clear()
+#9. ✅ Change the first pet_name to all uppercase letters
+#10. ✅ Append a new name to the list
+#11. ✅ Add a new name at a specific index
+#12. ✅ Add two lists together
+#13. ✅ Remove the final element from the list
+#14. ✅ Remove element by specific index
+#15. ✅ Remove a specific element
+#16. ✅ Remove all pet names from the list
 
 #!Tuple
 # 📚 Review:
@@ -36,16 +36,20 @@ pet_names = ['Rose', 'Meow Meow Beans', 'Mr.Legumes', 'Luke', 'Lea', 'Princess G
         # What advantages does this provide for us? In what situations
         # would this serve us?
 #TODO Accessing Elements
-#17. ✅ Create an empty Tuple, one with one element and one with 10 pet ages => () 
-#18. ✅ Print the first pet age => []
+#17. ✅ Create an empty Tuple, one with one element and one with 10 pet ages
+empty_tuple = ()
+single_tuple = (True,)
+ages_generator = tuple(range(10))
+
+#18. ✅ Print the first pet age
 
 #TODO Testing Mutability (you can add a tuple to a tuple though)
-#19. ✅ Attempt to remove an element with ".pop" (should error)
-#20. ✅ Attempt to change the first element (should error) => []
+#19. ✅ Attempt to remove an element with ".pop"
+#20. ✅ Attempt to change the first element
 
 #TODO Tuple Methods
-#21. ✅ Return the frequency of a given element => .count()
-#22. ✅ Return the index of a given element  => .index()
+#21. ✅ Return the frequency of a given element
+#22. ✅ Return the index of a given element
 
 #! Range
 #23. ✅ create a Range 
@@ -58,23 +62,20 @@ pet_fav_food = {'house plants', 'fish', 'bacon'}
 #TODO Reading
 #27. ✅ Print set elements with a loop
 #27. ✅ Check if an element is in a set 
-#27. ✅ Get random element => sample()
-#27. ✅ Get first element => next(iter(set({1, 2, 3})))
-#28. ✅ Print the pet attribute of "age" using ".get"
-#28. ✅ Get a copy of a set => copy()
-#28. ✅ isdisjointed, issubset, issuperset
+#27. ✅ Get first element
+#28. ✅ Get a copy of a set
+#28. ✅ isdisjoint, issubset, issuperset
 
 #TODO Updating 
-#29. ✅ Add an element to a set => add()
+#29. ✅ Add an element to a set
 #30. ✅ Union, intersection, difference
 #30. ✅ Update current set with elements from other set
 
-
 #TODO Deleting
-#31. ✅ Delete specific el using ".remove"  VS ".discard" => []
+#31. ✅ Delete specific el using ".remove"  VS ".discard"
 #32. ✅ Delete random element using ".pop"
 #33. ✅ Delete the last item for Rose using "popitem()"
-#33b ✅ Delete every key/value pair => clear()
+#33b ✅ Delete every key/value pair
 
 
 #! Dictionaries (from 3.7+, dictionaries are ordered)
@@ -86,7 +87,6 @@ pet_info_spot = dict(name='Spot', age=25, breed='boxer')
 
 #TODO Reading
 #27. ✅ Print the pet attribute of "name" using bracket notation 
-# print(pet_info_rose['temperament'])
 
 #28. ✅ Print the pet attribute of "age" using ".get"
 
@@ -97,8 +97,8 @@ pet_info_spot = dict(name='Spot', age=25, breed='boxer')
 #28d. ✅ Get dict pairs
 
 #TODO Updating 
-#29. ✅ Update Rose's age to 12 => []
-#30. ✅ Update Spot's age to 26 => .update({...})
+#29. ✅ Update Rose's age to 12
+#30. ✅ Update Spot's age to 26
 
 #TODO Deleting
 #31. ✅ Delete Rose's age using the "del" keyword => []
@@ -164,3 +164,24 @@ pet_info = [
 
 #! Writing Generators
 #43. ✅ Create a generator expression matching the filter above
+
+#! Compare Generators and Expressions
+import sys
+import timeit
+starter_list = list(range(100000))
+
+#! MEMORY
+print("List Comprehension Memory Size", sys.getsizeof([el for el in starter_list if el%2==0]))
+# 444376
+print("Generator Expression Memory Size",sys.getsizeof((el for el in starter_list if el%2==0)))
+#208
+
+#! RUNTIME
+print("Comprehension Run 1 Time", timeit.timeit("[el for el in starter_list if el%2==0]", "from __main__ import starter_list", number=1))
+#=> 0.005183833185583353
+print("Comprehension Run 1000 Time", timeit.timeit("[el for el in starter_list if el%2==0]", "from __main__ import starter_list", number=1000))
+# => 2.4483373747207224
+print("Generator Run 1 Time", timeit.timeit("(el for el in starter_list if el%2==0)", "from __main__ import starter_list", number=1))
+# => 9.041279554367065e-06
+print("Generator Run 1000 Time", timeit.timeit("(el for el in starter_list if el%2==0)", "from __main__ import starter_list", number=1000))
+# => 0.00024854158982634544

@@ -11,7 +11,10 @@ class Pet:
     """A class that represents the idea of an animal"""
     def __init__(self, **kwargs):
         for k, v in kwargs.items():
-            setattr(self, f"_{k}", v) if k in ALLOWED_LIST else None
+            #! we are not using the setter but assigning a value to the private attribute directly
+            # setattr(self, f"_{k}", v) if k in ALLOWED_LIST else None 
+            #! we are using the setter method to set initial values rather than doing it directly
+            setattr(self, k, v) if k in ALLOWED_LIST else None 
     
     def __str__(self):
         return f"Name: {self._name} and age: {self._age}"

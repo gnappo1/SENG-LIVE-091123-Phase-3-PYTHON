@@ -50,9 +50,9 @@ def make_list4():
     for item in range(100000):
         my_list = my_list + [item]
 
-
-print(make_list1())
-print(make_list2())
-print(make_list3())
-print(make_list4())
-print("done")
+if __name__ == "__main__":
+    print(make_list1())
+    print(make_list2())
+    print(make_list3())
+    print(make_list4())
+    print("done")

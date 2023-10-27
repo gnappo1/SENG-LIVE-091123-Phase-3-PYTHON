@@ -1,9 +1,13 @@
+
 class Pet:
     all = []
 
-    def __init__(self, name, breed):
+    def __init__(self, name, breed, owner):
         self.name = name
         self.breed = breed
+        self.owner = owner #! Dependency Injection
+        # Pet.all.append(self) #! anti-pattern and major pet peeve
+        # self.all.append(self) #! completely fine in Python
         type(self).all.append(self)
 
     @property
@@ -30,3 +34,24 @@ class Pet:
             raise ValueError("Breeds must be at least one char long")
         else:
             self._breed = new_breed
+
+    @property
+    def owner(self):
+        return self._owner
+    
+    @owner.setter
+    def owner(self, new_owner):
+        from .owner import Owner
+        if not isinstance(new_owner, Owner):
+            raise TypeError("Owner must be of type Owner")
+        elif hasattr(self, "owner"):
+            raise Exception("You cannot reset the owner after birth")
+        else:
+            self._owner = new_owner
+
+if __name__ == "__main__":
+    try:
+        fido = Pet(name="Fido", breed="Pug")
+    except Exception as e:
+        import ipdb; ipdb.set_trace()
+    print(fido)

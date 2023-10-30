@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS dogs(
     age INTEGER,
     owner_id INTEGER,
     favorite_treats TEXT,
-    image_url TEXT
+    image_url TEXT,
     FOREIGN KEY (owner_id) REFERENCES owners(id)
 );
 

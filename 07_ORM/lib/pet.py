@@ -149,6 +149,7 @@ class Pet(Helper):
         # If No "pet" Found, Create New "pet" Instance w/ All Attributes
 
     # ✅ 11. Add "update" Instance Method to Update All Attributes
+    #! Discussion: instance or class method? How do we intend to use it?
     def update(self):
         try:
             with CONN:

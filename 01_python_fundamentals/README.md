@@ -3,9 +3,9 @@
 ## Learning Goals
 
 - Review an introduction to Python and phase trajectory 
-- Demonstrate Python package management with `pip`
-- Demonstrate debugging in Python with `shell`, `print`, and `ipdb`
-- Review common Python data types (`str`, `int`, `float`, `bool`, `None`) (less common: `complex`, `bytes`, `bytearry`, `memoryview`)
+- Demonstrate Python package management with `pipenv`
+- Demonstrate debugging in Python with `VSC debugger`, `print`, and `ipdb`
+- Review Python data types (`str`, `int`, `float`, `complex`, `bol`, `bytes`, `bytearry`, `memoryview`, `None`)
 - Demonstrate Python conditionals and control flow
 - Demonstrate Python functions
 - Review Python variable scope and the `global` keyword
